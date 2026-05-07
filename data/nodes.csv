@@ -1,0 +1,96 @@
+id,label,type,description
+D_ACUTE_HOSPITAL,Acute Hospital,domain,"Whole acute provider operating model: flow, care delivery, performance, safety, finance and capacity."
+D_ELECTIVE_CARE,Elective Care,domain,"Planned outpatient, diagnostic, pre-operative, admitted and non-admitted treatment pathways."
+D_EMERGENCY_CARE,Emergency Care,domain,"Urgent and emergency care including ED attendances, ambulance arrivals, streaming, admissions and discharges."
+D_SDEC,Same Day Emergency Care (SDEC),domain,Same-day assessment and treatment intended to avoid admission where clinically appropriate.
+D_INPATIENTS,Inpatient Areas,domain,"Admitted ward-based care, bed occupancy, ward moves, discharge planning and length of stay."
+D_DAYCASES,Daycases,domain,Planned admitted care where the patient is discharged on the same day.
+D_CANCER,Cancer,domain,"Cancer referrals, diagnostics, treatment pathways, waiting time standards and outcomes."
+D_DIAGNOSTICS,Diagnostics,domain,"Imaging, pathology, physiological measurement, endoscopy and other diagnostic services."
+D_OUTPATIENTS,Outpatients,domain,"Referral, booking, attendance, follow-up, PIFU, DNA and clinic utilisation."
+D_THEATRES,Theatres,domain,"Theatre scheduling, utilisation, cancellations, lists, anaesthetics and recovery."
+D_CRITICAL_CARE,Critical Care,domain,"ICU/HDU capacity, occupancy, organ support, step-down and specialist critical care activity."
+D_MATERNITY,Maternity,domain,"Antenatal, intrapartum, postnatal care, births, safety and outcomes."
+D_PAEDIATRICS,Paediatrics,domain,"Children and young people's emergency, elective, inpatient and outpatient care."
+D_PHARMACY,Pharmacy and Medicines,domain,"Medicines optimisation, dispensing, prescribing, stock, antimicrobials and high-cost drugs."
+D_WORKFORCE,Workforce,domain,"Staffing, rostering, vacancies, sickness, bank/agency usage, productivity and skill mix."
+D_FINANCE,Finance,domain,"Income, expenditure, cost improvement, service-line reporting and efficiency."
+D_QUALITY_SAFETY,Quality and Safety,domain,"Incidents, harms, mortality, complaints, outcomes, clinical audit and patient experience."
+D_PATIENT_FLOW,Patient Flow,pathway,"Cross-hospital flow from arrival/referral through admission, transfer, discharge and follow-up."
+D_RTT,Referral to Treatment (RTT),pathway,18-week elective referral-to-treatment pathway and waiting list management.
+D_CANCER_PT,Cancer Patient Tracking List,pathway,Cancer pathway tracking from referral through diagnosis and treatment.
+D_UEC_FLOW,Urgent and Emergency Care Flow,pathway,Ambulance/ED/SDEC/admission/discharge flow and escalation.
+P_EXEC_PERFORMANCE,Executive Performance Dashboard,analysis_product,"High-level trust performance view across access, quality, workforce, finance and productivity."
+P_ELECTIVE_PT,Elective PTL Dashboard,analysis_product,"Waiting list, RTT, booking, validation, long wait and capacity view for elective care."
+P_UEC_DAILY,UEC Daily Sitrep / Flow Dashboard,analysis_product,"Daily urgent care demand, ED performance, bed state, admissions, discharges and escalation."
+P_SDEC_DASH,SDEC Performance Dashboard,analysis_product,"SDEC activity, conversion, turnaround, admission avoidance and specialty usage."
+P_BED_OCC,Bed Occupancy and Flow Dashboard,analysis_product,"Bed occupancy, stranded patients, criteria-to-reside, length of stay and discharge profile."
+P_THEATRE_UTIL,Theatre Utilisation Dashboard,analysis_product,"Session utilisation, late starts, early finishes, cancellations and productivity."
+P_CANCER_WAITING,Cancer Waiting Times Dashboard,analysis_product,"Cancer standards, PTL, breaches, tumour site performance and diagnostic/treatment intervals."
+P_DIAG_WAITING,Diagnostics Waiting Times Dashboard,analysis_product,"DM01-style waits, modality demand, capacity, utilisation and breaches."
+P_OP_UTIL,Outpatient Utilisation Dashboard,analysis_product,"Clinic utilisation, DNA, cancellations, follow-up backlog, PIFU and advice/guidance."
+P_WORKFORCE_PRODUCTIVITY,Workforce Productivity Dashboard,analysis_product,"Roster fill, sickness, vacancy, agency, bank and productivity indicators."
+P_QUALITY_SAFETY,Quality and Safety Dashboard,analysis_product,"Incidents, harms, mortality, complaints, infection control and patient experience."
+M_4HR,ED 4-hour standard,metric,Proportion of ED attendances admitted/transferred/discharged within four hours.
+M_AMB_HANDOVER,Ambulance handover delay,metric,Time from ambulance arrival to patient handover.
+M_RTT_18W,RTT within 18 weeks,metric,Proportion of incomplete RTT pathways waiting under 18 weeks.
+M_LONG_WAITS,Elective long waits,metric,Patients waiting beyond threshold such as 52/65/78 weeks depending standard.
+M_DM01_6W,Diagnostics within 6 weeks,metric,Proportion of diagnostic waits within six weeks.
+M_CANCER_28D,Cancer faster diagnosis standard,metric,Patients told whether cancer is diagnosed or ruled out within 28 days.
+M_CANCER_62D,Cancer 62-day treatment standard,metric,Urgent suspected cancer referral to first definitive treatment within 62 days.
+M_BED_OCC,Bed occupancy,metric,Occupied beds as a percentage of available beds.
+M_LOS,Length of stay,metric,"Duration from admission to discharge, often analysed by spell, ward, specialty or cohort."
+M_STRANDED,Stranded / super-stranded patients,metric,Patients with long stays above local/national thresholds.
+M_THEATRE_UTIL,Theatre utilisation,metric,Used theatre time as proportion of planned/available time.
+M_DNA,DNA rate,metric,Outpatient appointments where patient did not attend.
+M_SICKNESS,Sickness absence,metric,Workforce sickness absence rate.
+S_EPR,Electronic Patient Record,source_system,Core clinical and administrative patient record.
+S_PAS,Patient Administration System,source_system,"Demographics, referrals, appointments, admissions, discharges and waiting lists."
+S_ED,Emergency Department System,source_system,"ED attendance, triage, treatment, decisions and discharge/admission timestamps."
+S_PATHOLOGY,Pathology LIMS,source_system,"Pathology requests, specimens, results and turnaround times."
+S_RIS_PACS,RIS/PACS,source_system,"Radiology requests, imaging events, reports and modality information."
+S_THEATRES,Theatre System,source_system,"Theatre lists, sessions, procedures, timings and cancellations."
+S_CANCER,Cancer Tracking System,source_system,"Cancer pathway tracking, milestones, MDT and treatment data."
+S_ROSTER,E-rostering System,source_system,"Rostered shifts, staffing, absence, bank and agency usage."
+S_INCIDENT,Incident Reporting System,source_system,"Patient safety incidents, harms, risks and learning actions."
+DS_ADT,Admissions Discharges Transfers dataset,dataset,"Patient movement events across wards, beds and spells."
+DS_OP_APPTS,Outpatient appointments dataset,dataset,"Outpatient referrals, bookings, attendances, cancellations and clinic outcomes."
+DS_RTT,RTT pathway dataset,dataset,"Referral-to-treatment clocks, statuses, waits, pauses and outcomes."
+DS_ED_ATT,ED attendances dataset,dataset,"ED arrivals, triage, timestamps, investigations, outcomes and breach reasons."
+DS_DIAG,Diagnostics dataset,dataset,"Diagnostic waits, tests, modalities, requests, results and reporting dates."
+DS_CANCER,Cancer pathway dataset,dataset,"Cancer referral, tracking, diagnosis, treatment and standard breach data."
+DS_THEATRE,Theatre activity dataset,dataset,"Theatre session, list, case, timing and cancellation data."
+DS_WORKFORCE,Workforce dataset,dataset,"Roster, ESR/workforce, absence, vacancy and temporary staffing data."
+ER_RTT,National RTT standards,external_requirement,National elective access reporting and 18-week standard.
+ER_DM01,DM01 diagnostics return,external_requirement,National diagnostic waiting times and activity return.
+ER_CWT,Cancer Waiting Times standards,external_requirement,National cancer waiting time standards and reporting.
+ER_UEC,UEC standards and sitreps,external_requirement,Urgent and emergency care performance standards and operational returns.
+R_EXEC,Executive Team,role,Board and executive users of performance and assurance information.
+R_DIVISIONAL,Divisional Management Teams,role,"Operational leadership users managing specialties, services and recovery plans."
+R_OPERATIONAL,Operational Managers,role,Day-to-day service managers using actionable operational intelligence.
+R_CLINICAL,Clinical Leads,role,"Clinical leaders using data for quality, safety, capacity and pathway improvement."
+R_ANALYTICS,Analytics Team,role,"Data and analytics professionals building, assuring and explaining information products."
+NOF_RTT_18W,Percentage of cases waiting 18 weeks or less for elective treatment,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Access; subdomain: Elective care; status: scored; scope: Acute trusts.
+NOF_RTT_52W,Percentage of cases waiting more than 52 weeks for elective treatment,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Access; subdomain: Elective care; status: scored; scope: Acute trusts.
+NOF_CANCER_28D,Percentage of patients with cancer diagnosed or ruled out within 28 days of an urgent referral,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Access; subdomain: Cancer; status: scored; scope: Acute trusts.
+NOF_CANCER_62D,Percentage of patients treated for cancer within 62 days of referral,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Access; subdomain: Cancer; status: scored; scope: Acute trusts.
+NOF_ED_4HR,"Percentage of emergency department attendances admitted, transferred or discharged within 4 hours",nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Access; subdomain: Urgent and emergency care; status: scored; scope: Acute trusts.
+NOF_ED_12HR,Percentage of emergency department attendances spending over 12 hours in the department,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Access; subdomain: Urgent and emergency care; status: scored; scope: Acute trusts.
+NOF_SHMI,Summary Hospital Level Mortality Indicator,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Effectiveness and experience of care; subdomain: Effectiveness; status: scored; scope: Acute trusts.
+NOF_DISCHARGE_READY_DELAY,Average number of days from discharge ready date and actual discharge date,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Effectiveness and experience of care; subdomain: Discharge / flow; status: scored for acute; contextual for ICBs; scope: Integrated care boards (contextual) and acute trusts.
+NOF_READMISSION_RATE,Readmission rate band,nhs_oversight_metric,"NHS Oversight Framework 2025/26 Annex A metric. Domain: Effectiveness and experience of care; subdomain: Readmissions; status: scored; scope: Acute, community and mental health trusts."
+NOF_CQC_INPATIENT_SURVEY,CQC inpatient survey satisfaction rate,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Effectiveness and experience of care; subdomain: Patient experience; status: scored; scope: Acute trusts.
+NOF_MATERNITY_SURVEY,National maternity survey score,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Effectiveness and experience of care; subdomain: Maternity; status: contextual in graph pending scoring confirmation; scope: Acute trusts.
+NOF_STAFF_RAISING_CONCERNS,NHS Staff Survey – raising concerns sub-score,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Patient safety; subdomain: Safety culture; status: scored for trusts; contextual for ICBs; scope: All organisations (contextual only for ICBs).
+NOF_CQC_SAFE,"CQC safe inspection score, if awarded within the preceding 2 years",nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Patient safety; subdomain: CQC safety; status: scored; scope: All trusts.
+NOF_HCAI,"Rates of Healthcare Associated Infection: MRSA, C-Difficile and E-Coli",nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Patient safety; subdomain: Infection control; status: scored; scope: Acute trusts.
+NOF_PRESSURE_ULCER,Percentage of inpatients acquiring a new pressure ulcer,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Patient safety; subdomain: Harm / pressure ulcers; status: contextual; scope: Acute trusts (contextual).
+NOF_SICKNESS,Sickness absence rate,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: People and workforce; subdomain: Workforce wellbeing; status: scored for trusts; contextual for ICBs; scope: All trusts (contextual only for ICBs).
+NOF_STAFF_ENGAGEMENT,NHS staff survey engagement theme score,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: People and workforce; subdomain: Workforce engagement; status: scored for trusts; contextual for ICBs; scope: All trusts (contextual only for ICBs).
+NOF_NETS_SATISFACTION,National Education and Training Survey overall satisfaction score,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: People and workforce; subdomain: Education and training; status: contextual; scope: All trusts (contextual).
+NOF_PLANNED_SURPLUS_DEFICIT,Planned surplus/deficit,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Finance and productivity; subdomain: Finance; status: scored for trusts; contextual for ICBs; scope: All organisations (contextual only for ICBs).
+NOF_VARIANCE_TO_PLAN,Variance year-to-date to financial plan,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Finance and productivity; subdomain: Finance; status: scored for trusts; contextual for ICBs; scope: All organisations (contextual only for ICBs).
+NOF_PRODUCTIVITY_LEVEL,Implied productivity level,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Finance and productivity; subdomain: Productivity; status: scored for acute trusts; contextual for ICBs; scope: Integrated care boards (contextual only) and acute trusts.
+NOF_TOBACCO_TREATMENT,Percentage of inpatients referred to in-house tobacco treatment services who make a supported attempt to quit stop smoking,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Improving health and reducing inequality; subdomain: Primary prevention; status: contextual; scope: Acute and community trusts.
+NOF_DIAG_6W_INEQUALITIES,Percentage of people waiting over 6 weeks for a diagnostic procedure or test,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Improving health and reducing inequality; subdomain: Primary prevention / diagnostics; status: contextual; scope: Acute trusts.
+NOF_U18_ELECTIVE_GROWTH,Under 18s elective waiting list growth,nhs_oversight_metric,NHS Oversight Framework 2025/26 Annex A metric. Domain: Improving health and reducing inequality; subdomain: Inequalities; status: contextual; scope: Acute trusts.

@@ -1,0 +1,16 @@
+id,label,source_set,parent_domain,subdomain,specialty,metric_type,unit,direction,organisation_scope,scoring_status,nof_domain,nof_subdomain,source_url,notes
+THEATRE_UTIL_OVERALL,Overall theatre utilisation rate,theatres,Theatres,Theatre utilisation,,rate,%,higher_better,Acute trusts,operational,,,,,Used time as % of planned available time; target typically 85-90%
+THEATRE_UTIL_ELECTIVE,Elective theatre utilisation rate,theatres,Theatres,Theatre utilisation,,rate,%,higher_better,Acute trusts,operational,,,,,
+THEATRE_UTIL_EMERGENCY,Emergency theatre utilisation rate,theatres,Theatres,Theatre utilisation,,rate,%,higher_better,Acute trusts,operational,,,,,
+THEATRE_LATE_STARTS,Percentage of theatre lists with a late start,theatres,Theatres,Theatre efficiency,,rate,%,lower_better,Acute trusts,operational,,,,,Typically late start = >15 min after scheduled start
+THEATRE_EARLY_FINISHES,Percentage of theatre lists finishing more than 30 minutes early,theatres,Theatres,Theatre efficiency,,rate,%,lower_better,Acute trusts,operational,,,,,Potential underutilisation
+THEATRE_OVERRUNS,Percentage of theatre lists overrunning,theatres,Theatres,Theatre efficiency,,rate,%,lower_better,Acute trusts,operational,,,,,Impacts staffing and patient recovery
+THEATRE_CANCELLED_HOSP,Number of theatre cases cancelled on day for hospital/organisational reasons,theatres,Theatres,Theatre cancellations,,count,cases,lower_better,Acute trusts,reported,,,https://www.england.nhs.uk/statistics/statistical-work-areas/cancelled-elective-operations/,
+THEATRE_CANCELLED_PATIENT,Number of theatre cases cancelled on day for patient reasons,theatres,Theatres,Theatre cancellations,,count,cases,lower_better,Acute trusts,reported,,,https://www.england.nhs.uk/statistics/statistical-work-areas/cancelled-elective-operations/,
+THEATRE_CANCELLATION_RATE,Percentage of elective operations cancelled on day of surgery,theatres,Theatres,Theatre cancellations,,rate,%,lower_better,Acute trusts,operational,,,,,
+THEATRE_CASES_PER_LIST,Average number of cases per operating list,theatres,Theatres,Theatre efficiency,,mean,cases,higher_better,Acute trusts,operational,,,,,
+THEATRE_LIST_FILL_RATE,Percentage of available theatre list slots filled,theatres,Theatres,Theatre utilisation,,rate,%,higher_better,Acute trusts,operational,,,,,
+THEATRE_TURNOVER_TIME,Average turnover time between cases (minutes),theatres,Theatres,Theatre efficiency,,mean,minutes,lower_better,Acute trusts,operational,,,,,
+THEATRE_DAYCASE_RATE,Day case rate as percentage of elective theatre procedures,theatres,Theatres,Theatre efficiency,,rate,%,higher_better,Acute trusts,reported,,,https://www.england.nhs.uk/statistics/statistical-work-areas/hospital-activity/,Higher indicates best-practice ambulatory surgical care
+THEATRE_SESSIONS_WEEK,Number of elective theatre sessions per week,theatres,Theatres,Theatre activity,,count,sessions,neutral,Acute trusts,operational,,,,,
+THEATRE_EMERGENCY_RATIO,Ratio of emergency to elective theatre cases,theatres,Theatres,Theatre activity,,ratio,,neutral,Acute trusts,operational,,,,,High emergency pressure can displace elective lists

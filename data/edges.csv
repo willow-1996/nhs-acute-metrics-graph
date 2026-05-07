@@ -1,0 +1,144 @@
+source,target,type,description
+D_ACUTE_HOSPITAL,D_ELECTIVE_CARE,contains,Acute hospital includes elective care.
+D_ACUTE_HOSPITAL,D_EMERGENCY_CARE,contains,Acute hospital includes urgent and emergency care.
+D_ACUTE_HOSPITAL,D_INPATIENTS,contains,Acute hospital includes admitted inpatient care.
+D_ACUTE_HOSPITAL,D_DIAGNOSTICS,contains,Acute hospital includes diagnostic services.
+D_ACUTE_HOSPITAL,D_CANCER,contains,Acute hospital includes cancer pathways.
+D_ACUTE_HOSPITAL,D_OUTPATIENTS,contains,Acute hospital includes outpatient services.
+D_ACUTE_HOSPITAL,D_THEATRES,contains,Acute hospital includes theatres.
+D_ACUTE_HOSPITAL,D_WORKFORCE,contains,Workforce underpins acute hospital delivery.
+D_ACUTE_HOSPITAL,D_FINANCE,contains,Finance underpins acute hospital planning and control.
+D_ACUTE_HOSPITAL,D_QUALITY_SAFETY,contains,Quality and safety spans acute hospital services.
+D_EMERGENCY_CARE,D_SDEC,contains,SDEC is a major UEC component.
+D_ELECTIVE_CARE,D_DAYCASES,contains,Daycase activity is part of elective admitted care.
+D_ELECTIVE_CARE,D_RTT,contains,RTT is the core elective pathway framework.
+D_CANCER,D_CANCER_PT,contains,Cancer PTL is the operational tracking pathway for cancer.
+D_EMERGENCY_CARE,D_UEC_FLOW,contains,UEC flow covers ED and acute admission pathways.
+D_PATIENT_FLOW,D_EMERGENCY_CARE,overlaps_with,Emergency arrivals create admitted and non-admitted flow demand.
+D_PATIENT_FLOW,D_INPATIENTS,overlaps_with,Inpatient capacity and discharge drive whole-hospital flow.
+D_PATIENT_FLOW,D_SDEC,overlaps_with,SDEC can reduce avoidable admissions and improve flow.
+D_ELECTIVE_CARE,D_DIAGNOSTICS,depends_on,Elective pathways often depend on diagnostic capacity and turnaround.
+D_CANCER,D_DIAGNOSTICS,depends_on,Cancer diagnosis and staging depend heavily on diagnostics.
+D_ELECTIVE_CARE,D_THEATRES,depends_on,Admitted elective treatment depends on theatre capacity.
+D_DAYCASES,D_THEATRES,depends_on,Daycase procedures often require theatre capacity.
+D_EMERGENCY_CARE,D_INPATIENTS,depends_on,ED performance depends on available inpatient beds and timely admission/discharge.
+P_EXEC_PERFORMANCE,D_ACUTE_HOSPITAL,supports,Executive dashboard supports whole-trust oversight.
+P_EXEC_PERFORMANCE,R_EXEC,supports,Executive dashboard supports board and executive users.
+P_ELECTIVE_PT,D_ELECTIVE_CARE,supports,Elective PTL dashboard supports elective recovery.
+P_ELECTIVE_PT,D_RTT,supports,Elective PTL dashboard supports RTT pathway management.
+P_ELECTIVE_PT,DS_RTT,uses_dataset,Elective PTL uses RTT pathway data.
+P_ELECTIVE_PT,M_RTT_18W,measures,Elective PTL measures RTT 18-week performance.
+P_ELECTIVE_PT,M_LONG_WAITS,measures,Elective PTL measures long waits.
+P_ELECTIVE_PT,ER_RTT,reports_to,Elective PTL aligns to national RTT standards.
+P_UEC_DAILY,D_EMERGENCY_CARE,supports,UEC dashboard supports ED and urgent flow management.
+P_UEC_DAILY,D_UEC_FLOW,supports,UEC dashboard supports whole urgent care flow.
+P_UEC_DAILY,DS_ED_ATT,uses_dataset,UEC dashboard uses ED attendance data.
+P_UEC_DAILY,DS_ADT,uses_dataset,UEC dashboard uses admission/discharge/transfer data.
+P_UEC_DAILY,M_4HR,measures,UEC dashboard measures ED 4-hour performance.
+P_UEC_DAILY,M_AMB_HANDOVER,measures,UEC dashboard measures ambulance handover delays.
+P_UEC_DAILY,ER_UEC,reports_to,UEC dashboard aligns to UEC standards and returns.
+P_SDEC_DASH,D_SDEC,supports,SDEC dashboard supports same-day emergency care.
+P_SDEC_DASH,DS_ED_ATT,uses_dataset,SDEC may use ED attendance and referral data.
+P_SDEC_DASH,DS_ADT,uses_dataset,SDEC uses admission/discharge events where applicable.
+P_BED_OCC,D_INPATIENTS,supports,Bed dashboard supports inpatient capacity and discharge planning.
+P_BED_OCC,D_PATIENT_FLOW,supports,Bed dashboard supports flow decisions.
+P_BED_OCC,DS_ADT,uses_dataset,Bed dashboard uses patient movement data.
+P_BED_OCC,M_BED_OCC,measures,Bed dashboard measures occupancy.
+P_BED_OCC,M_LOS,measures,Bed dashboard measures length of stay.
+P_BED_OCC,M_STRANDED,measures,Bed dashboard measures stranded patients.
+P_THEATRE_UTIL,D_THEATRES,supports,Theatre dashboard supports theatre productivity.
+P_THEATRE_UTIL,D_ELECTIVE_CARE,supports,Theatre productivity supports elective recovery.
+P_THEATRE_UTIL,DS_THEATRE,uses_dataset,Theatre dashboard uses theatre activity data.
+P_THEATRE_UTIL,M_THEATRE_UTIL,measures,Theatre dashboard measures utilisation.
+P_CANCER_WAITING,D_CANCER,supports,Cancer dashboard supports cancer pathway management.
+P_CANCER_WAITING,D_CANCER_PT,supports,Cancer dashboard supports PTL tracking.
+P_CANCER_WAITING,DS_CANCER,uses_dataset,Cancer dashboard uses cancer pathway data.
+P_CANCER_WAITING,M_CANCER_28D,measures,Cancer dashboard measures faster diagnosis standard.
+P_CANCER_WAITING,M_CANCER_62D,measures,Cancer dashboard measures 62-day standard.
+P_CANCER_WAITING,ER_CWT,reports_to,Cancer dashboard aligns to CWT standards.
+P_DIAG_WAITING,D_DIAGNOSTICS,supports,Diagnostics dashboard supports diagnostic capacity and waits.
+P_DIAG_WAITING,DS_DIAG,uses_dataset,Diagnostics dashboard uses diagnostic waiting/activity data.
+P_DIAG_WAITING,M_DM01_6W,measures,Diagnostics dashboard measures six-week diagnostic waits.
+P_DIAG_WAITING,ER_DM01,reports_to,Diagnostics dashboard aligns to DM01.
+P_OP_UTIL,D_OUTPATIENTS,supports,Outpatient dashboard supports clinic productivity and backlog management.
+P_OP_UTIL,DS_OP_APPTS,uses_dataset,Outpatient dashboard uses appointments data.
+P_OP_UTIL,M_DNA,measures,Outpatient dashboard measures DNA rate.
+P_WORKFORCE_PRODUCTIVITY,D_WORKFORCE,supports,Workforce dashboard supports staffing and productivity oversight.
+P_WORKFORCE_PRODUCTIVITY,DS_WORKFORCE,uses_dataset,Workforce dashboard uses workforce and rostering data.
+P_WORKFORCE_PRODUCTIVITY,M_SICKNESS,measures,Workforce dashboard measures sickness.
+P_QUALITY_SAFETY,D_QUALITY_SAFETY,supports,Quality dashboard supports safety and assurance.
+DS_ADT,S_PAS,originates_in,ADT events commonly originate in PAS/EPR.
+DS_ADT,S_EPR,originates_in,ADT data may originate in EPR.
+DS_OP_APPTS,S_PAS,originates_in,Outpatient appointments originate in PAS.
+DS_RTT,S_PAS,originates_in,RTT data originates in PAS/waiting list systems.
+DS_ED_ATT,S_ED,originates_in,ED attendance data originates in ED system.
+DS_DIAG,S_PATHOLOGY,originates_in,Pathology diagnostic data originates in LIMS.
+DS_DIAG,S_RIS_PACS,originates_in,Radiology diagnostic data originates in RIS/PACS.
+DS_CANCER,S_CANCER,originates_in,Cancer pathway data originates in cancer tracking system.
+DS_THEATRE,S_THEATRES,originates_in,Theatre activity originates in theatre system.
+DS_WORKFORCE,S_ROSTER,originates_in,Workforce operational data originates in rostering system.
+P_EXEC_PERFORMANCE,P_ELECTIVE_PT,depends_on,Executive view can roll up elective product metrics.
+P_EXEC_PERFORMANCE,P_UEC_DAILY,depends_on,Executive view can roll up UEC product metrics.
+P_EXEC_PERFORMANCE,P_BED_OCC,depends_on,Executive view can roll up bed and flow metrics.
+P_EXEC_PERFORMANCE,P_CANCER_WAITING,depends_on,Executive view can roll up cancer metrics.
+P_EXEC_PERFORMANCE,P_DIAG_WAITING,depends_on,Executive view can roll up diagnostic metrics.
+R_ANALYTICS,P_ELECTIVE_PT,owned_by,Analytics team builds/maintains elective product with operational owners.
+R_ANALYTICS,P_UEC_DAILY,owned_by,Analytics team builds/maintains UEC product with operational owners.
+R_OPERATIONAL,P_UEC_DAILY,supports,Operational managers use UEC daily dashboard.
+R_DIVISIONAL,P_ELECTIVE_PT,supports,Divisional teams use elective PTL dashboard.
+R_CLINICAL,P_QUALITY_SAFETY,supports,Clinical leads use quality and safety dashboard.
+D_ELECTIVE_CARE,NOF_RTT_18W,maps_to_framework_metric,D_ELECTIVE_CARE relates to NOF metric: Percentage of cases waiting 18 weeks or less for elective treatment.
+P_ELECTIVE_PT,NOF_RTT_18W,measures,P_ELECTIVE_PT should expose or contextualise NOF metric: Percentage of cases waiting 18 weeks or less for elective treatment.
+M_RTT_18W,NOF_RTT_18W,maps_to_framework_metric,Local metric maps to NOF metric: Percentage of cases waiting 18 weeks or less for elective treatment.
+D_ELECTIVE_CARE,NOF_RTT_52W,maps_to_framework_metric,D_ELECTIVE_CARE relates to NOF metric: Percentage of cases waiting more than 52 weeks for elective treatment.
+P_ELECTIVE_PT,NOF_RTT_52W,measures,P_ELECTIVE_PT should expose or contextualise NOF metric: Percentage of cases waiting more than 52 weeks for elective treatment.
+M_LONG_WAITS,NOF_RTT_52W,maps_to_framework_metric,Local metric maps to NOF metric: Percentage of cases waiting more than 52 weeks for elective treatment.
+D_CANCER,NOF_CANCER_28D,maps_to_framework_metric,D_CANCER relates to NOF metric: Percentage of patients with cancer diagnosed or ruled out within 28 days of an urgent referral.
+P_CANCER_WAITING,NOF_CANCER_28D,measures,P_CANCER_WAITING should expose or contextualise NOF metric: Percentage of patients with cancer diagnosed or ruled out within 28 days of an urgent referral.
+M_CANCER_28D,NOF_CANCER_28D,maps_to_framework_metric,Local metric maps to NOF metric: Percentage of patients with cancer diagnosed or ruled out within 28 days of an urgent referral.
+D_CANCER,NOF_CANCER_62D,maps_to_framework_metric,D_CANCER relates to NOF metric: Percentage of patients treated for cancer within 62 days of referral.
+P_CANCER_WAITING,NOF_CANCER_62D,measures,P_CANCER_WAITING should expose or contextualise NOF metric: Percentage of patients treated for cancer within 62 days of referral.
+M_CANCER_62D,NOF_CANCER_62D,maps_to_framework_metric,Local metric maps to NOF metric: Percentage of patients treated for cancer within 62 days of referral.
+D_EMERGENCY_CARE,NOF_ED_4HR,maps_to_framework_metric,"D_EMERGENCY_CARE relates to NOF metric: Percentage of emergency department attendances admitted, transferred or discharged within 4 hours."
+P_UEC_DAILY,NOF_ED_4HR,measures,"P_UEC_DAILY should expose or contextualise NOF metric: Percentage of emergency department attendances admitted, transferred or discharged within 4 hours."
+M_4HR,NOF_ED_4HR,maps_to_framework_metric,"Local metric maps to NOF metric: Percentage of emergency department attendances admitted, transferred or discharged within 4 hours."
+D_EMERGENCY_CARE,NOF_ED_12HR,maps_to_framework_metric,D_EMERGENCY_CARE relates to NOF metric: Percentage of emergency department attendances spending over 12 hours in the department.
+P_UEC_DAILY,NOF_ED_12HR,measures,P_UEC_DAILY should expose or contextualise NOF metric: Percentage of emergency department attendances spending over 12 hours in the department.
+D_QUALITY_SAFETY,NOF_SHMI,maps_to_framework_metric,D_QUALITY_SAFETY relates to NOF metric: Summary Hospital Level Mortality Indicator.
+P_QUALITY_SAFETY,NOF_SHMI,measures,P_QUALITY_SAFETY should expose or contextualise NOF metric: Summary Hospital Level Mortality Indicator.
+D_INPATIENTS,NOF_DISCHARGE_READY_DELAY,maps_to_framework_metric,D_INPATIENTS relates to NOF metric: Average number of days from discharge ready date and actual discharge date.
+P_BED_OCC,NOF_DISCHARGE_READY_DELAY,measures,P_BED_OCC should expose or contextualise NOF metric: Average number of days from discharge ready date and actual discharge date.
+D_INPATIENTS,NOF_READMISSION_RATE,maps_to_framework_metric,D_INPATIENTS relates to NOF metric: Readmission rate band.
+P_QUALITY_SAFETY,NOF_READMISSION_RATE,measures,P_QUALITY_SAFETY should expose or contextualise NOF metric: Readmission rate band.
+D_QUALITY_SAFETY,NOF_CQC_INPATIENT_SURVEY,maps_to_framework_metric,D_QUALITY_SAFETY relates to NOF metric: CQC inpatient survey satisfaction rate.
+P_QUALITY_SAFETY,NOF_CQC_INPATIENT_SURVEY,measures,P_QUALITY_SAFETY should expose or contextualise NOF metric: CQC inpatient survey satisfaction rate.
+D_MATERNITY,NOF_MATERNITY_SURVEY,maps_to_framework_metric,D_MATERNITY relates to NOF metric: National maternity survey score.
+P_QUALITY_SAFETY,NOF_MATERNITY_SURVEY,measures,P_QUALITY_SAFETY should expose or contextualise NOF metric: National maternity survey score.
+D_QUALITY_SAFETY,NOF_STAFF_RAISING_CONCERNS,maps_to_framework_metric,D_QUALITY_SAFETY relates to NOF metric: NHS Staff Survey – raising concerns sub-score.
+P_QUALITY_SAFETY,NOF_STAFF_RAISING_CONCERNS,measures,P_QUALITY_SAFETY should expose or contextualise NOF metric: NHS Staff Survey – raising concerns sub-score.
+D_QUALITY_SAFETY,NOF_CQC_SAFE,maps_to_framework_metric,"D_QUALITY_SAFETY relates to NOF metric: CQC safe inspection score, if awarded within the preceding 2 years."
+P_QUALITY_SAFETY,NOF_CQC_SAFE,measures,"P_QUALITY_SAFETY should expose or contextualise NOF metric: CQC safe inspection score, if awarded within the preceding 2 years."
+D_QUALITY_SAFETY,NOF_HCAI,maps_to_framework_metric,"D_QUALITY_SAFETY relates to NOF metric: Rates of Healthcare Associated Infection: MRSA, C-Difficile and E-Coli."
+P_QUALITY_SAFETY,NOF_HCAI,measures,"P_QUALITY_SAFETY should expose or contextualise NOF metric: Rates of Healthcare Associated Infection: MRSA, C-Difficile and E-Coli."
+D_QUALITY_SAFETY,NOF_PRESSURE_ULCER,maps_to_framework_metric,D_QUALITY_SAFETY relates to NOF metric: Percentage of inpatients acquiring a new pressure ulcer.
+P_QUALITY_SAFETY,NOF_PRESSURE_ULCER,measures,P_QUALITY_SAFETY should expose or contextualise NOF metric: Percentage of inpatients acquiring a new pressure ulcer.
+D_WORKFORCE,NOF_SICKNESS,maps_to_framework_metric,D_WORKFORCE relates to NOF metric: Sickness absence rate.
+P_WORKFORCE_PRODUCTIVITY,NOF_SICKNESS,measures,P_WORKFORCE_PRODUCTIVITY should expose or contextualise NOF metric: Sickness absence rate.
+M_SICKNESS,NOF_SICKNESS,maps_to_framework_metric,Local metric maps to NOF metric: Sickness absence rate.
+D_WORKFORCE,NOF_STAFF_ENGAGEMENT,maps_to_framework_metric,D_WORKFORCE relates to NOF metric: NHS staff survey engagement theme score.
+P_WORKFORCE_PRODUCTIVITY,NOF_STAFF_ENGAGEMENT,measures,P_WORKFORCE_PRODUCTIVITY should expose or contextualise NOF metric: NHS staff survey engagement theme score.
+D_WORKFORCE,NOF_NETS_SATISFACTION,maps_to_framework_metric,D_WORKFORCE relates to NOF metric: National Education and Training Survey overall satisfaction score.
+P_WORKFORCE_PRODUCTIVITY,NOF_NETS_SATISFACTION,measures,P_WORKFORCE_PRODUCTIVITY should expose or contextualise NOF metric: National Education and Training Survey overall satisfaction score.
+D_FINANCE,NOF_PLANNED_SURPLUS_DEFICIT,maps_to_framework_metric,D_FINANCE relates to NOF metric: Planned surplus/deficit.
+P_EXEC_PERFORMANCE,NOF_PLANNED_SURPLUS_DEFICIT,measures,P_EXEC_PERFORMANCE should expose or contextualise NOF metric: Planned surplus/deficit.
+D_FINANCE,NOF_VARIANCE_TO_PLAN,maps_to_framework_metric,D_FINANCE relates to NOF metric: Variance year-to-date to financial plan.
+P_EXEC_PERFORMANCE,NOF_VARIANCE_TO_PLAN,measures,P_EXEC_PERFORMANCE should expose or contextualise NOF metric: Variance year-to-date to financial plan.
+D_FINANCE,NOF_PRODUCTIVITY_LEVEL,maps_to_framework_metric,D_FINANCE relates to NOF metric: Implied productivity level.
+P_EXEC_PERFORMANCE,NOF_PRODUCTIVITY_LEVEL,measures,P_EXEC_PERFORMANCE should expose or contextualise NOF metric: Implied productivity level.
+D_INPATIENTS,NOF_TOBACCO_TREATMENT,maps_to_framework_metric,D_INPATIENTS relates to NOF metric: Percentage of inpatients referred to in-house tobacco treatment services who make a supported attempt to quit stop smoking.
+P_QUALITY_SAFETY,NOF_TOBACCO_TREATMENT,measures,P_QUALITY_SAFETY should expose or contextualise NOF metric: Percentage of inpatients referred to in-house tobacco treatment services who make a supported attempt to quit stop smoking.
+D_DIAGNOSTICS,NOF_DIAG_6W_INEQUALITIES,maps_to_framework_metric,D_DIAGNOSTICS relates to NOF metric: Percentage of people waiting over 6 weeks for a diagnostic procedure or test.
+P_DIAG_WAITING,NOF_DIAG_6W_INEQUALITIES,measures,P_DIAG_WAITING should expose or contextualise NOF metric: Percentage of people waiting over 6 weeks for a diagnostic procedure or test.
+M_DM01_6W,NOF_DIAG_6W_INEQUALITIES,maps_to_framework_metric,Local metric maps to NOF metric: Percentage of people waiting over 6 weeks for a diagnostic procedure or test.
+D_PAEDIATRICS,NOF_U18_ELECTIVE_GROWTH,maps_to_framework_metric,D_PAEDIATRICS relates to NOF metric: Under 18s elective waiting list growth.
+P_ELECTIVE_PT,NOF_U18_ELECTIVE_GROWTH,measures,P_ELECTIVE_PT should expose or contextualise NOF metric: Under 18s elective waiting list growth.
