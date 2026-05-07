@@ -2,6 +2,9 @@
 static/
 docs/
 
+# LibreOffice lock files
+.~lock.*#
+
 # R
 .Rhistory
 .RData
