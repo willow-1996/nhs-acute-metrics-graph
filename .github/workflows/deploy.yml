@@ -31,7 +31,7 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           pak-version: stable
-          upgrade: false
+          upgrade: "FALSE"
           extra-packages: |
             cran::r2d3
             cran::shinylive
