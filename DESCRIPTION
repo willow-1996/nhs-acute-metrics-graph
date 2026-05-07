@@ -1,0 +1,18 @@
+Package: nhsAcuteMetricsGraph
+Title: NHS Acute Metrics Knowledge Graph
+Version: 0.1.0
+Description: Shiny + r2d3 knowledge graph for NHS acute metrics, deployable via shinylive.
+Authors@R: person("Willow", role = c("aut", "cre"), email = "willow@lightbulb.is")
+License: MIT
+Imports:
+    shiny,
+    r2d3,
+    readr,
+    dplyr,
+    purrr,
+    DT,
+    tidyr,
+    jsonlite
+Suggests:
+    shinylive
+Encoding: UTF-8
